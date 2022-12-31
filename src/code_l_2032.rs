@@ -1,3 +1,5 @@
+use std::collections::HashSet;
+
 struct Solution;
 
 impl Solution {
@@ -5,11 +7,24 @@ impl Solution {
     // https://leetcode.cn/problems/two-out-of-three/
     #[allow(dead_code)]
     pub fn two_out_of_three(nums1: Vec<i32>, nums2: Vec<i32>, nums3: Vec<i32>) -> Vec<i32> {
-        let a = nums1.iter().filter(|&x| nums2.contains(x)).collect::<Vec<_>>();
-        let b = nums3.iter().filter(|&x| nums2.contains(x)).collect::<Vec<_>>();
-        let union = a.iter().filter(|&x| !b.contains(x)).chain(&b).collect::<Vec<_>>();
-        let union = union.iter().map(|x| ***x).collect::<Vec<_>>();
-        return union;
+        let s1 = nums1.into_iter().collect::<HashSet<_>>();
+        let s2 = nums2.into_iter().collect::<HashSet<_>>();
+        let s3 = nums3.into_iter().collect::<HashSet<_>>();
+        let mut res = HashSet::new();
+
+        for &x in s1.intersection(&s2) {
+            res.insert(x);
+        }
+
+        for &x in s2.intersection(&s3) {
+            res.insert(x);
+        }
+
+        for &x in s3.intersection(&s1) {
+            res.insert(x);
+        }
+
+        res.into_iter().collect()
     }
 }
 

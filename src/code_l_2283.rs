@@ -23,4 +23,17 @@ mod test {
         let res = Solution::digit_count(num);
         assert!(res);
     }
+
+    #[test]
+    fn test1() {
+        let num = "195365".to_string();
+        let x = num.bytes();
+        println!("{:?}", x);    //[49, 57, 53, 51, 54, 53]
+    }
+
+    #[test]
+    fn test2() {
+        let num = b"1992";
+        
+    }
 }

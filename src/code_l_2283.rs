@@ -30,10 +30,4 @@ mod test {
         let x = num.bytes();
         println!("{:?}", x);    //[49, 57, 53, 51, 54, 53]
     }
-
-    #[test]
-    fn test2() {
-        let num = b"1992";
-        
-    }
 }

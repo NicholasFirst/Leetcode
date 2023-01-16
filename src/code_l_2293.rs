@@ -2,7 +2,7 @@ struct Solution;
 
 impl Solution {
 
-    // https://leetcode.cn/problems/min-max-game/solutions/1769485/r-by-drackramoray-vstw/?languageTags=rust
+    // https://leetcode.cn/problems/min-max-game/
     #[allow(dead_code)]
     pub fn min_max_game(mut nums: Vec<i32>) -> i32 {
         while nums.len() > 1 {
@@ -15,7 +15,6 @@ impl Solution {
                 })
                 .collect();
         }
-
         nums[0]
     }
 }

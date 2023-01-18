@@ -68,9 +68,10 @@ mod test{
     fn test_while() {
         let mut vec =  vec![1, 2, 3];
         let mut i = 0;
-        while i < vec.len() {
-            vec.push(i);
-            i += 1;
-        }
+        // out of memory
+        // while i < vec.len() {
+        //     vec.push(i);
+        //     i += 1;
+        // }
     }
 }

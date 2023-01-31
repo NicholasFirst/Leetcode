@@ -64,6 +64,7 @@ mod code_l_1636;
 mod code_1656;
 mod code_l_1662;
 mod code_m_1663;
+mod code_m_1669;
 mod code_l_1684;
 mod code_l_1742;
 mod code_m_1750;
@@ -102,6 +103,7 @@ mod code_l_2293;
 mod code_l_2299;
 mod code_l_2303;
 mod code_l_2309;
+mod code_l_2315;
 mod code_l_2319;
 mod code_l_2351;
 

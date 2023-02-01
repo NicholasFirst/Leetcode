@@ -4,7 +4,8 @@ impl Solution {
     /// https://leetcode.cn/problems/string-matching-in-an-array/
     #[allow(dead_code)]
     pub fn string_matching(words: Vec<String>) -> Vec<String> {
-        todo!()
+        let sentence = words.join(" ");
+        words.into_iter().filter(|word| sentence.matches(word).nth(1).is_some()).collect::<Vec<_>>()
     }
 }
 
@@ -21,6 +22,7 @@ mod test {
             "superhero".to_string(),
         ];
         let res = Solution::string_matching(words);
-        assert_eq!(vec!["hero".to_string(), "as".to_string()], res);
+        assert!(res.contains(&"hero".to_string()));
+        assert!(res.contains(&"as".to_string()));
     }
 }

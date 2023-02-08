@@ -42,6 +42,7 @@ mod code_m_907;
 mod code_m_915;
 mod code_m_946;
 mod code_1282;
+mod code_m_1233;
 mod code_1302;
 mod code_1331;
 mod code_1374;

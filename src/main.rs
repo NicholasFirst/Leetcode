@@ -77,6 +77,7 @@ mod code_m_1775;
 mod code_l_1779;
 mod code_m_1785;
 mod code_l_1796;
+mod code_m_1797;
 mod code_m_1801;
 mod code_m_1802;
 mod code_l_1805;
@@ -108,6 +109,7 @@ mod code_l_2309;
 mod code_l_2315;
 mod code_l_2319;
 mod code_l_2325;
+mod code_l_2335;
 mod code_l_2351;
 
 mod code_l_0102;

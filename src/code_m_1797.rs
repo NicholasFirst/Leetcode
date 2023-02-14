@@ -6,8 +6,9 @@ struct AuthenticationManager {
     map: HashMap<String, i32>,
 }
 
+#[allow(dead_code)]
 impl AuthenticationManager {
-    
+
     fn new(time_to_live: i32) -> Self {
         AuthenticationManager { time_to_live: time_to_live, map: HashMap::new() }
     }

@@ -44,7 +44,7 @@ mod test{
         let current_time = 112233;
         obj.generate(token_id.clone(), current_time);
         obj.renew(token_id.clone(), current_time);
-        let ret_3 = obj.count_unexpired_tokens(current_time);
+        let _ret_3 = obj.count_unexpired_tokens(current_time);
     }
 
     #[test]

@@ -33,7 +33,7 @@ mod test{
         assert_eq!(ans[1], 0);
 
         let nums1 = vec![0];
-        let ans = Solution::number_of_pairs(nums);
+        let ans = Solution::number_of_pairs(nums1);
         assert_eq!(ans[0], 0);
         assert_eq!(ans[1], 1);
     }

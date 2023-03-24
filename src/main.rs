@@ -46,6 +46,7 @@ mod code_h_895;
 mod code_m_907;
 mod code_m_915;
 mod code_m_946;
+mod code_h_1032;
 mod code_h_1250;
 mod code_1282;
 mod code_m_1233;

@@ -10,9 +10,9 @@ struct StreamChecker {
 impl StreamChecker {
     #[allow(dead_code)]
     fn new(words: Vec<String>) -> Self {
-        StreamChecker { 
+        StreamChecker {
             words,
-            s: "".to_string() 
+            s: "".to_string(),
         }
     }
 
@@ -38,6 +38,9 @@ mod test {
         let mut obj = StreamChecker::new(words);
         let query_char = vec!['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'];
         let output: Vec<bool> = query_char.into_iter().map(|c| obj.query(c)).collect();
-        assert_eq!(vec![false, false, false, true, false, true, false, false, false, false, false, true], output);
+        assert_eq!(
+            vec![false, false, false, true, false, true, false, false, false, false, false, true],
+            output
+        );
     }
 }

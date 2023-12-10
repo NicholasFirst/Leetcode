@@ -1,5 +1,6 @@
 struct Solution;
 
+#[allow(dead_code)]
 impl Solution {
     #[allow(dead_code)]
     pub fn alternate_digit_sum(mut n: i32) -> i32 {

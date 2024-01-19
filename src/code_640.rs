@@ -69,6 +69,7 @@ mod test{
 
     /// 对角线遍历
     /// https://leetcode.cn/leetbook/read/array-and-string/cuxq3/
+    #[allow(dead_code)]
     pub fn find_diagonal_order(mat: Vec<Vec<i32>>) -> Vec<i32> {
         let total = mat.len() + mat[0].len();
         let row_max = mat.len();

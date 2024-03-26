@@ -1,22 +1,41 @@
+use std::{mem, ptr};
+
 struct Solution;
 
 impl Solution {
     #[allow(dead_code)]
     // https://leetcode.cn/problems/sort-array-by-parity-ii/
-    pub fn sort_array_by_parity_ii(nums: Vec<i32>) -> Vec<i32> {
+    pub fn sort_array_by_parity_ii(mut nums: Vec<i32>) -> Vec<i32> {
+        //双指针倍内存
+        // let mut i = 0;
+        // let mut j = 1;
+        // let mut new_nums = nums.clone();
+        // for v in nums {
+        //     if v % 2 == 0 {
+        //         new_nums[i] = v;
+        //         i += 2;
+        //     }else {
+        //         new_nums[j] = v;
+        //         j += 2;
+        //     }
+        // }
+        // new_nums
+        //双指针原始内存
+        let mut nums = nums;
         let mut i = 0;
         let mut j = 1;
-        let mut new_nums = nums.clone();
-        for v in nums {
-            if v % 2 == 0 {
-                new_nums[i] = v;
+        while i < nums.len() && j < nums.len() {
+            while i < nums.len() && nums[i] & 1 == 0 {
                 i += 2;
-            }else {
-                new_nums[j] = v;
+            }
+            while j < nums.len() && nums[j] & 1 == 1 {
                 j += 2;
             }
+            if i < nums.len() && j < nums.len() {
+                nums.swap(i, j);
+            }
         }
-        new_nums
+        nums
     }
 }
 

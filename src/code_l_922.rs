@@ -1,11 +1,9 @@
-use std::{mem, ptr};
-
 struct Solution;
 
 impl Solution {
     #[allow(dead_code)]
     // https://leetcode.cn/problems/sort-array-by-parity-ii/
-    pub fn sort_array_by_parity_ii(mut nums: Vec<i32>) -> Vec<i32> {
+    pub fn sort_array_by_parity_ii(nums: Vec<i32>) -> Vec<i32> {
         //双指针倍内存
         // let mut i = 0;
         // let mut j = 1;

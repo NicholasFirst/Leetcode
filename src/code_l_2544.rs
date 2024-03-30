@@ -3,7 +3,7 @@ struct Solution;
 #[allow(dead_code)]
 impl Solution {
     #[allow(dead_code)]
-    pub fn alternate_digit_sum(mut n: i32) -> i32 {
+    pub fn alternate_digit_sum(n: i32) -> i32 {
         let mut res = 0;
         let mut neg = 1;
         for i in n.to_string().split("") {

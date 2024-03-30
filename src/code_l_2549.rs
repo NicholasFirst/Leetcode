@@ -33,6 +33,7 @@ mod tests {
         assert_eq!(result, 4);
     }
 
+    #[test]
     fn test2() {
         let n = 3;
         let result = Solution::distinct_integers(n);

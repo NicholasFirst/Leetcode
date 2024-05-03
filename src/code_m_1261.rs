@@ -21,6 +21,7 @@ use std::rc::Rc;
 use std::cell::RefCell;
 
 
+#[allow(unused)]
 struct FindElements {
     node: TreeNode,
 }
@@ -31,6 +32,7 @@ struct FindElements {
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 #[allow(dead_code)]
+#[allow(unused)]
 impl FindElements {
     #[allow(dead_code)]
     fn new(root: Option<Rc<RefCell<TreeNode>>>) -> Self {

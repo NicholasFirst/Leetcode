@@ -5,6 +5,7 @@ struct Solution;
 
 impl Solution {
     #[allow(dead_code)]
+    #[allow(unused)]
     pub fn num_components(head: Option<Box<ListNode>>, nums: Vec<i32>) -> i32 {
         todo!()
     }
@@ -12,6 +13,7 @@ impl Solution {
 
 
 #[cfg(test)]
+#[allow(unused)]
 mod test {
     use super::Solution;
 

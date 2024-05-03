@@ -3,6 +3,7 @@ struct Solution;
 
 impl Solution {
     // https://leetcode.cn/problems/sum-of-subarray-minimums/solution/
+    #[allow(unused)]
     #[allow(dead_code)]
     pub fn sum_subarray_mins(arr: Vec<i32>) -> i32 {
         let n = arr.len();

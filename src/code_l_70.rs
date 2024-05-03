@@ -2,6 +2,7 @@ struct Solution;
 
 //https://leetcode.cn/problems/climbing-stairs/?envType=daily-question&envId=2023-12-10
 impl Solution {
+    #[allow(dead_code)]
     pub fn climb_stairs(n: i32) -> i32 {
         if n <= 2 {
             return n;

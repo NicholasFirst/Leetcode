@@ -4,6 +4,7 @@ struct Solution;
 impl Solution{
     
     #[allow(dead_code)]
+    #[allow(unused)]
     pub fn max_score(s: String) -> i32 {
         todo!()
     }

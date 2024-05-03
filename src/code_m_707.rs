@@ -3,12 +3,16 @@ struct MyLinkedList {
     head: Option<Box<Node>>
 }
 
+#[allow(dead_code)]
+#[allow(unused)]
 #[derive(Default)]
 struct Node {
     val: i32,
     next: Option<Box<Node>>,
 }
 
+#[allow(dead_code)]
+#[allow(unused)]
 impl MyLinkedList {
     fn new() -> Self {
         MyLinkedList { head: Some(Box::new(Node::default())) }
@@ -43,6 +47,7 @@ mod test {
     use super::MyLinkedList;
 
     #[test]
+    #[allow(unused)]
     fn test() {
         let obj = MyLinkedList::new();
         // let ret_1: i32 = obj.get(index);

@@ -3,6 +3,7 @@ struct Solution;
 impl Solution {
 
     #[allow(dead_code)]
+    #[allow(unused_variables)]
     //https://leetcode.cn/problems/number-of-boomerangs/?envType=daily-question&envId=2024-01-08
     pub fn number_of_boomerangs(points: Vec<Vec<i32>>) -> i32 {
         todo!()

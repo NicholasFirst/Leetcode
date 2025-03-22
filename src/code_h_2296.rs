@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 struct TextEditor {
     ptr: usize,
     text: Vec<u8>,
@@ -8,6 +9,7 @@ struct TextEditor {
  * If you need a mutable reference, change it to `&mut self` instead.
  */
  impl TextEditor {
+    #[allow(dead_code)]
     fn new() -> Self {
         TextEditor {
             ptr: 0,
@@ -15,12 +17,14 @@ struct TextEditor {
         }
     }
     
+    #[allow(dead_code)]
     fn add_text(&mut self, text: String) {
         let text_bytes: Vec<u8> = text.as_bytes().into();
         self.text.splice(self.ptr..self.ptr, text_bytes);
         self.ptr += text.len();
     }
     
+    #[allow(dead_code)]
     fn delete_text(&mut self, k: i32) -> i32 {
         let k = (k as usize).min(self.ptr);
         self.text.drain((self.ptr - k)..self.ptr);
@@ -28,11 +32,13 @@ struct TextEditor {
         k as i32
     }
     
+    #[allow(dead_code)]
     fn cursor_left(&mut self, k: i32) -> String {
         self.ptr = (self.ptr as i32 - k).max(0) as usize;
         String::from_utf8_lossy(&self.text[self.ptr - 10.min(self.ptr)..self.ptr]).to_string()
     }
     
+    #[allow(dead_code)]
     fn cursor_right(&mut self, k: i32) -> String {
         self.ptr = (self.ptr as i32 + k).min(self.text.len() as i32) as usize;
         String::from_utf8_lossy(&self.text[self.ptr - 10.min(self.ptr)..self.ptr]).to_string()

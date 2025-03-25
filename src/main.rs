@@ -7,6 +7,7 @@ mod code_l_13;
 mod code_l_21;
 mod code_48;
 mod code_lcp_50;
+mod code_h_51;
 mod code_56;
 mod code_l_67;
 mod code_l_69;

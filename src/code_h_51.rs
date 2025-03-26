@@ -1,6 +1,3 @@
-use std::io;
-use std::io::Write;
-
 struct Solution;
 
 impl Solution {
@@ -53,8 +50,8 @@ mod tests {
 
     #[test]
     fn test() {
-        // assert_eq!(Solution::solve_n_queens(4), vec![vec![".Q..".to_string(), "...Q".to_string(), "Q...".to_string(), "..Q.".to_string()], vec!["..Q.".to_string(), "Q...".to_string(), "...Q".to_string(), ".Q..".to_string()]]);
-        // assert_eq!(Solution::solve_n_queens(1), vec![vec!["Q".to_string()]]);
+        assert_eq!(Solution::solve_n_queens(4), vec![vec![".Q..".to_string(), "...Q".to_string(), "Q...".to_string(), "..Q.".to_string()], vec!["..Q.".to_string(), "Q...".to_string(), "...Q".to_string(), ".Q..".to_string()]]);
+        assert_eq!(Solution::solve_n_queens(1), vec![vec!["Q".to_string()]]);
         let res = Solution::solve_n_queens(5);
         for item in res {
             println!("{:?}", item);

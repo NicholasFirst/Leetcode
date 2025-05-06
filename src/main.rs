@@ -125,6 +125,7 @@ mod code_l_1822;
 mod code_l_1827;
 mod code_m_1828;
 mod code_l_1832;
+mod code_l_1920;
 mod code_l_1945;
 mod code_l_1971;
 mod code_1991;

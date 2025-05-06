@@ -2,6 +2,7 @@ struct Solution;
 
 impl Solution {
     // https://leetcode.cn/problems/sort-array-by-parity/?envType=problem-list-v2&envId=sorting
+    // 给你一个整数数组 nums，将 nums 中的的所有偶数元素移动到数组的前面，后跟所有奇数元素。
     #[allow(dead_code)]
     pub fn sort_array_by_parity(nums: Vec<i32>) -> Vec<i32> {
         let mut nums = nums;

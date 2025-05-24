@@ -3,6 +3,7 @@ struct Solution;
 impl Solution {
 
     // https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-i/?envType=daily-question&envId=2025-05-15
+    #[allow(dead_code)]
     pub fn get_longest_subsequence(words: Vec<String>, groups: Vec<i32>) -> Vec<String> {
         let n = groups.len();
         let mut ans = vec![];

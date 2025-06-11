@@ -2,6 +2,7 @@ struct Solution;
 
 impl Solution {
     // https://leetcode.cn/problems/missing-number/description/?envType=problem-list-v2&envId=array
+    #[allow(dead_code)]
     pub fn missing_number(nums: Vec<i32>) -> i32 {
         let mut count = 0i32;
         for (index, iter) in nums.iter().enumerate() {

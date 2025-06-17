@@ -64,7 +64,7 @@ mod test{
 
     /// while循环，该循环与for相反，每次都会重新求值
     #[test]
-    #[should_panic]
+    //[should_panic]
     fn test_while() {
         // let mut vec =  vec![1, 2, 3];
         // let mut i = 0;

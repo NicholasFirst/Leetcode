@@ -5,15 +5,17 @@ impl Solution {
     // https://leetcode.cn/problems/reverse-integer/
     #[allow(dead_code)]
     pub fn reverse(x: i32) -> i32 {
-        fn helper(mut n: i32) -> Option<i32> {
-            let mut res = 0i32;
-            while n.abs() != 0 {
-                res = res.checked_mul(10)?.checked_add(n % 10)?;
-                n /= 10;
+        let mut x = x;
+        let mut ans = 0;
+
+        while x != 0 {
+            if ans > i32::MAX / 10 || ans < i32::MIN / 10 {
+                return 0;
             }
-            Some(res)
+            ans = ans * 10 + x % 10;
+            x /= 10;
         }
-        helper(x).unwrap_or_default()
+        ans
     }
 }
 

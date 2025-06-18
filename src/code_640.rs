@@ -72,14 +72,40 @@ mod test{
     #[allow(dead_code)]
     #[allow(unused)]
     pub fn find_diagonal_order(mat: Vec<Vec<i32>>) -> Vec<i32> {
-        let total = mat.len() + mat[0].len();
-        let row_max = mat.len();
-        let line_max = mat[0].len();
-        let (mut a, mut b) = (0usize, 0usize);
-        for i in 0..total {
-            
+        if mat.is_empty() || mat[0].is_empty() {
+            return vec![];
         }
-        todo!()
+        let m = mat.len();
+        let n = mat[0].len();
+        let mut result = Vec::with_capacity(m * n);
+        
+        for s in 0..(m + n - 1) {
+            if s % 2 == 0 {
+                // Even sum: from bottom to top
+                let i = std::cmp::min(s, m - 1);
+                let mut j = s - i;
+                for i in (0..=i).rev() {
+                    if j >= n {
+                        break;
+                    }
+                    result.push(mat[i][j]);
+                    j += 1;
+                }
+            } else {
+                // Odd sum: from top to bottom
+                let j = std::cmp::min(s, n - 1);
+                let mut i = s - j;
+                for j in (0..=j).rev() {
+                    if i >= m {
+                        break;
+                    }
+                    result.push(mat[i][j]);
+                    i += 1;
+                }
+            }
+        }
+        
+        result
     }
 
     #[test]

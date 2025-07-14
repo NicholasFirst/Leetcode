@@ -72,6 +72,7 @@ mod code_h_1250;
 mod code_m_1261;
 mod code_1282;
 mod code_l_1287;
+mod code_l_1290;
 mod code_m_1233;
 mod code_1302;
 mod code_1331;

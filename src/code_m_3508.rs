@@ -47,8 +47,8 @@ impl Router {
     
     fn get_count(&self, destination: i32, start_time: i32, end_time: i32) -> i32 {
         if let Some(v) = self.query.get(&destination) {
-            let left = v.partition_point(|&x| *x < start_time);
-            let right = v.partition_point(|&x| *x <= end_time);
+            let left = v.partition_point(|x| *x < start_time);
+            let right = v.partition_point(|x| *x <= end_time);
             (right - left) as _
         } else {
             0

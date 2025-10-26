@@ -1,11 +1,14 @@
 struct Bank {
+    #[allow(unused)]
     total: i32,
+    #[allow(unused)]
     balance: Vec<i64>
 }
 
 
 impl Bank {
 
+    #[allow(dead_code)]
     fn new(balance: Vec<i64>) -> Self {
         Self {
             total: balance.len() as i32,
@@ -13,6 +16,7 @@ impl Bank {
         }
     }
     
+    #[allow(dead_code)]
     fn transfer(&mut self, account1: i32, account2: i32, money: i64) -> bool {
         if account1 <= self.total && account2 <= self.total {
             if self.withdraw(account1, money) {
@@ -23,6 +27,7 @@ impl Bank {
         false
     }
     
+    #[allow(dead_code)]
     fn deposit(&mut self, account: i32, money: i64) -> bool {
         if account > self.total {
             return false;
@@ -32,6 +37,7 @@ impl Bank {
         true
     }
     
+    #[allow(dead_code)]
     fn withdraw(&mut self, account: i32, money: i64) -> bool {
         if account > self.total {
             return false;
